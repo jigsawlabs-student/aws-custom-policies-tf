@@ -65,7 +65,7 @@ resource "aws_iam_policy" "ecr_custom_read_only" {
          "ecr:BatchCheckLayerAvailability", 
          "ecr:GetDownloadUrlForLayer"]
         Effect   = "Allow"
-        Resource = "*"
+        Resource = "*" # The * means any repo.  So change this to match your repo arn
       },
     ]
   })
